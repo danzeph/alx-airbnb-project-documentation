@@ -27,15 +27,16 @@ Search properties by these tags:
   
 
 ### 4. Booking Management
-+ Booking creation
-+ Validating Bookings(with dates) to avoid double booking
++ Create Bookings
++ Validating Booking dates to prevent double booking
 + Booking cancelation
-+ Tracking Booking cancelation
++ Tracking Booking status (pending, confirmed, cancelled, completed).
 + Booking history
 
 
 ### 5. Payment Integration
 + Implement secure payment gateways (Stripe, Paypal)
++ Upfront payment from guest
 + Automate Host Payments
 + Multi-currency support
 
@@ -63,7 +64,7 @@ Search properties by these tags:
 ## Technical Requirements
 
 ### 1. Database management
-+ Make Use Of MySQL or PostgreSQL
++ Make Use Of MySQL or PostgreSQL for the database
 + Required tables:
   + Users(guest and hosts)
   + Propeties
@@ -73,14 +74,36 @@ Search properties by these tags:
 
     
 ### 2. API Development
-+ Make use of RESTful APIs to make functionalities available to the frontend
-+   
++ Make use of RESTful APIs to make functionalities available to the frontend.
++ Use Proper HTTP methods:
+  + GET
+  + POST
+  + PUT
+  + DELETE
++ Use GraphQL for complex data fetching(optional).
+
 
 ### 3. Authentication and Authorization
-### 4. File Storage
-### 5. Third-Party Services
-### 6. Error Handling and Logging
++ Use **JWT** for secured user authentication.
++ Password hashing(bcypt).
++ Use RBAC technique to differentiate permissions between:
+    + Guests
+    + Hosts
+    + Admins
 
+
+### 4. File Storage
++ Store Property images.
++ Store User Profile Photos.
++ Implore Cloud Options(AWS S3 or Cloudinary).
++ Local File Storage( For this project's implementation).
+
+### 5. Third-Party Services
++ Use email services (SendGrid, Mailgun).
++ Payment Gateways (Stripe, PayPal).
+  
+### 6. Error Handling and Logging
++ Implement global error handling for APIs.
 
 ## Non-Functional Requirements
 ### 1. Scalabity
